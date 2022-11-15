@@ -5,6 +5,9 @@
 
 body {
   background-color: var(--primary-color);
+   position: absolute;
+  left: 35%;
+  top: 15%;
 }
 
 .outer-line {
