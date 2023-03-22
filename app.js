@@ -28,12 +28,12 @@ const alienInvaders = [
 
 // Inserting the aliens inside the squares
 function draw() {
-  for (i = 0; i < alienInvaders.length; i++) {
+  for (let i = 0; i < alienInvaders.length; i++) {
     let invader = squares[alienInvaders[i]];
     let img = document.createElement("img");
     if (!aliensRemoved.includes(i)) {
-      img.setAttribute("src", "/images/invader-retro.png");
-      img.classList.add("invader--img");
+      img.setAttribute("src", "/public/images/invader-retro.png");
+      img.classList.add("invader__img");
       invader.classList.add("invader");
       invader.appendChild(img);
       // console.log(alienInvaders[i]);
@@ -51,13 +51,13 @@ draw();
 
 // Remove the invaders
 function removeInvader() {
-  for (i = 0; i < alienInvaders.length; i++) {
+  for (let i = 0; i < alienInvaders.length; i++) {
     let invader = squares[alienInvaders[i]];
     let img = invader.querySelector("img");
     if (img && !invader.classList.contains("shooter")) {
       invader.removeChild(img);
       invader.classList.remove("invader");
-      img.classList.remove("invader--img");
+      img.classList.remove("invader__img");
     }
   }
 }
@@ -66,8 +66,8 @@ function drawShooter() {
   const shooter = squares[currentShooterIndex];
   const img = document.createElement("img");
 
-  img.setAttribute("src", "./images/shooter-retro.png");
-  img.classList.add("shooter--img");
+  img.setAttribute("src", "/public/images/shooter-retro.png");
+  img.classList.add("shooter__img");
 
   shooter.appendChild(img);
   shooter.classList.add("shooter");
@@ -180,7 +180,7 @@ function shoot(e) {
 
       invader.removeChild(img);
       invader.classList.remove("invader");
-      img.classList.remove("invader--img");
+      img.classList.remove("invader__img");
 
       setTimeout(
         () => squares[currentLaserIndex].classList.remove("boom"),
