@@ -32,7 +32,7 @@ function draw() {
     let invader = squares[alienInvaders[i]];
     let img = document.createElement("img");
     if (!aliensRemoved.includes(i)) {
-      img.setAttribute("src", "/public/images/invader-retro.png");
+      img.setAttribute("src", "./images/invader-retro.png");
       img.classList.add("invader__img");
       invader.classList.add("invader");
       invader.appendChild(img);
@@ -66,7 +66,7 @@ function drawShooter() {
   const shooter = squares[currentShooterIndex];
   const img = document.createElement("img");
 
-  img.setAttribute("src", "/public/images/shooter-retro.png");
+  img.setAttribute("src", "./images/shooter-retro.png");
   img.classList.add("shooter__img");
 
   shooter.appendChild(img);
