@@ -1,6 +1,7 @@
 :root {
   --primary-color: rgba(151, 196, 1, 255);
   --secondary-color: rgba(74, 74, 74, 0.948);
+  user-select: none;
 }
 
 body {
